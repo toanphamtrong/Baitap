@@ -1,0 +1,58 @@
+-- MySQL dump 10.13  Distrib 8.0.13, for Win64 (x86_64)
+--
+-- Host: localhost    Database: itsol_dbcar
+-- ------------------------------------------------------
+-- Server version	8.0.13
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+ SET NAMES utf8 ;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `car`
+--
+
+DROP TABLE IF EXISTS `car`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `car` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `numberPlate` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `yearOfManufacture` bigint(20) DEFAULT NULL,
+  `brand` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `haveInsurance` tinyint(1) DEFAULT NULL,
+  `havePositioningDevice` tinyint(1) DEFAULT NULL,
+  `havePowerSteering` tinyint(1) DEFAULT NULL,
+  `actionDuration` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `car`
+--
+
+LOCK TABLES `car` WRITE;
+/*!40000 ALTER TABLE `car` DISABLE KEYS */;
+INSERT INTO `car` VALUES (11,'Car #(1)','92983',2003,'TOYOTA',1,NULL,NULL,NULL),(12,'Car #(2)','75220',2008,'HYUNDAI',1,NULL,NULL,NULL),(13,'Car #(3)','45869',1985,'BMW',1,NULL,NULL,NULL),(14,'Car #(4)','52920',2003,'TOYOTA',0,NULL,NULL,NULL),(15,'Car #(5)','51964',2009,'BMW',1,NULL,NULL,NULL),(16,'Car #(6)','88713',2009,'HYUNDAI',0,NULL,NULL,NULL),(17,'Car #(7)','14034',2004,'HYUNDAI',0,NULL,NULL,NULL),(18,'Car #(8)','54600',2008,'HYUNDAI',0,NULL,NULL,NULL),(19,'Car #(9)','17876',1990,'TOYOTA',0,NULL,NULL,NULL),(20,'Car #(10)','97904',2006,'BMW',0,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `car` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-04-14 17:42:24
